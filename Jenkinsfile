@@ -21,9 +21,9 @@ podTemplate(label: 'kubectl-heptio-builder',
                     withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {                  
                         sh """
                            docker-compose up --build
-                           docker tag kubectl-helm-heptio:2.13.2 ${DOCKER_IMAGE_REPO}:2.13.2                                     
-                           docker tag kubectl-helm-heptio:2.13.2 ${DOCKER_IMAGE_REPO}:latest
-                           docker push ${DOCKER_IMAGE_REPO}:2.13.2                             
+                           docker tag kubectl-helm-heptio:2.12.3 ${DOCKER_IMAGE_REPO}:2.12.3                                     
+                           docker tag kubectl-helm-heptio:2.12.3 ${DOCKER_IMAGE_REPO}:latest
+                           docker push ${DOCKER_IMAGE_REPO}:2.12.3                             
                            docker push ${DOCKER_IMAGE_REPO}:latest                           
                            """ 
                     }
