@@ -1,0 +1,8 @@
+version: '3.5'
+services: 
+  heptio-v2-12-3:
+    build:
+      context: v2-12-3/.
+      network: host
+    image: kubectl-helm-heptio:2.12.3
+    command: ls -la /usr/local/bin
